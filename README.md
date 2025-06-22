@@ -1,0 +1,13 @@
+# layout
+- layout分为app下的layout和page下的layout，app下的layout是整个应用的布局，page下的layout是页面的布局
+- app下的layout文件需要返回根节点html和body标签，page下的layout文件不需要返回根节点html和body标签否则会报错
+
+# template
+- 同上面layout，不过template无论是在app文件下，还是对应的路由文件下，写法都是和page下的layout一样
+- layout和template展示的关系是，template中的children是路由内容，layout中的children是template中的children
+
+# layout和template的区别
+- layout作为全局或某个路由下的公共页面，在同一个layout下的不同路由进行切换时layout中的内容不会进行重新传染，而template中的内容会进行重新渲染
+- 上面指的渲染与否指的是layout组件和template组件中的内容，在layout和template下的内容在更新路由时都会重新渲染
+
+# layout是服务端组件 不能更改为客户端组件
